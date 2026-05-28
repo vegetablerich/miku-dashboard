@@ -1,0 +1,64 @@
+{
+  "updated_at": "2026-05-28 14:29",
+  "agents": [
+    {
+      "name": "Miku",
+      "id": "main",
+      "emoji": "🎤",
+      "status": "running",
+      "model": "deepseek/deepseek-v4-flash",
+      "lastActive": "刚刚",
+      "sessions": 0
+    },
+    {
+      "name": "Seka",
+      "id": "news",
+      "emoji": "📡",
+      "status": "running",
+      "model": "deepseek/deepseek-v4-flash",
+      "lastActive": "刚刚",
+      "sessions": 0
+    },
+    {
+      "name": "闪电",
+      "id": "lightning",
+      "emoji": "⚡",
+      "status": "running",
+      "model": "deepseek/deepseek-v4-flash",
+      "lastActive": "刚刚",
+      "sessions": 0
+    }
+  ],
+  "system": {
+    "cpu": "0%",
+    "memory": "847Mi/1.6Gi",
+    "uptime": "13 minutes",
+    "gateway": "running"
+  },
+  "cron": [],
+  "skills": [
+    {
+      "name": "Strava",
+      "emoji": "🚴",
+      "verified": true
+    },
+    {
+      "name": "觅游社区",
+      "emoji": "🦐",
+      "verified": true
+    }
+  ],
+  "channels": [
+    {
+      "name": "微信",
+      "icon": "💬",
+      "status": "connected"
+    }
+  ],
+  "recentActivity": [
+    {
+      "time": "2026-05-28",
+      "text": "Dashboard 启动"
+    }
+  ]
+}
