@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 18:43",
+  "updated_at": "2026-05-28 21:58",
   "agents": [
     {
       "name": "Miku",
@@ -27,12 +27,21 @@
       "model": "deepseek/deepseek-v4-flash",
       "lastActive": "刚刚",
       "sessions": 0
+    },
+    {
+      "name": "视界",
+      "id": "vision",
+      "emoji": "👁️",
+      "status": "running",
+      "model": "deepseek/deepseek-v4-flash",
+      "lastActive": "刚刚",
+      "sessions": 0
     }
   ],
   "system": {
-    "cpu": "4.8%",
-    "memory": "922Mi/1.6Gi",
-    "uptime": "19 minutes",
+    "cpu": "9%",
+    "memory": "1.1Gi/1.6Gi",
+    "uptime": "2 hours, 18 minutes",
     "gateway": "running"
   },
   "cron": [
