@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 17:06",
+  "updated_at": "2026-05-28 17:18",
   "agents": [
     {
       "name": "Miku",
@@ -30,9 +30,9 @@
     }
   ],
   "system": {
-    "cpu": "9%",
-    "memory": "1.2Gi/1.6Gi",
-    "uptime": "2 hours, 51 minutes",
+    "cpu": "0%",
+    "memory": "846Mi/1.6Gi",
+    "uptime": "3 hours, 2 minutes",
     "gateway": "running"
   },
   "cron": [
@@ -81,43 +81,8 @@
   ],
   "skills": [
     {
-      "name": "1password",
-      "emoji": "🔐",
-      "verified": true
-    },
-    {
-      "name": "apple-notes",
-      "emoji": "📝",
-      "verified": true
-    },
-    {
-      "name": "apple-reminders",
-      "emoji": "⏰",
-      "verified": true
-    },
-    {
-      "name": "bear-notes",
-      "emoji": "🐻",
-      "verified": true
-    },
-    {
-      "name": "blogwatcher",
-      "emoji": "📰",
-      "verified": true
-    },
-    {
-      "name": "blucli",
-      "emoji": "🫐",
-      "verified": true
-    },
-    {
-      "name": "│ Use when controlling web pages with the OpenClaw",
+      "name": "│ Use when controlling web pages with the OpenClaw browser",
       "emoji": "browser-automation",
-      "verified": true
-    },
-    {
-      "name": "camsnap",
-      "emoji": "📸",
       "verified": true
     },
     {
@@ -126,37 +91,17 @@
       "verified": true
     },
     {
-      "name": "│ Search, install, update, sync, or publish agent",
-      "emoji": "clawhub",
-      "verified": true
-    },
-    {
-      "name": "coding-agent",
-      "emoji": "🧩",
-      "verified": true
-    },
-    {
       "name": "diagram-maker",
       "emoji": "🧭",
       "verified": true
     },
     {
-      "name": "discord",
-      "emoji": "🎮",
-      "verified": true
-    },
-    {
-      "name": "eightctl",
-      "emoji": "🛌",
-      "verified": true
-    },
-    {
-      "name": "│ Feishu document read/write operations. Activate when",
+      "name": "│ Feishu document read/write operations. Activate when user",
       "emoji": "feishu-doc",
       "verified": true
     },
     {
-      "name": "│ Feishu cloud storage file management. Activate when",
+      "name": "│ Feishu cloud storage file management. Activate when user",
       "emoji": "feishu-drive",
       "verified": true
     },
@@ -171,53 +116,8 @@
       "verified": true
     },
     {
-      "name": "gemini",
-      "emoji": "✨",
-      "verified": true
-    },
-    {
-      "name": "│ Fetch GitHub issues, select candidates, spawn",
-      "emoji": "gh-issues",
-      "verified": true
-    },
-    {
-      "name": "gifgrep",
-      "emoji": "🧲",
-      "verified": true
-    },
-    {
-      "name": "github",
-      "emoji": "🐙",
-      "verified": true
-    },
-    {
-      "name": "gog",
-      "emoji": "🎮",
-      "verified": true
-    },
-    {
-      "name": "goplaces",
-      "emoji": "📍",
-      "verified": true
-    },
-    {
       "name": "│ Audit/harden OpenClaw hosts: SSH, firewall, updates,",
       "emoji": "healthcheck",
-      "verified": true
-    },
-    {
-      "name": "himalaya",
-      "emoji": "📧",
-      "verified": true
-    },
-    {
-      "name": "imsg",
-      "emoji": "📨",
-      "verified": true
-    },
-    {
-      "name": "mcporter",
-      "emoji": "📦",
       "verified": true
     },
     {
@@ -226,17 +126,7 @@
       "verified": true
     },
     {
-      "name": "model-usage",
-      "emoji": "📊",
-      "verified": true
-    },
-    {
-      "name": "nano-pdf",
-      "emoji": "📄",
-      "verified": true
-    },
-    {
-      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node",
+      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node pairing, QR/",
       "emoji": "node-connect",
       "verified": true
     },
@@ -251,58 +141,8 @@
       "verified": true
     },
     {
-      "name": "obsidian",
-      "emoji": "💎",
-      "verified": true
-    },
-    {
-      "name": "openai-whisper",
-      "emoji": "🎤",
-      "verified": true
-    },
-    {
-      "name": "openai-whisper-api",
-      "emoji": "🌐",
-      "verified": true
-    },
-    {
-      "name": "openhue",
-      "emoji": "💡",
-      "verified": true
-    },
-    {
-      "name": "oracle",
-      "emoji": "🧿",
-      "verified": true
-    },
-    {
-      "name": "ordercli",
-      "emoji": "🛵",
-      "verified": true
-    },
-    {
-      "name": "peekaboo",
-      "emoji": "👀",
-      "verified": true
-    },
-    {
       "name": "│ Debug Python with pdb, breakpoint(), post-mortem",
       "emoji": "python-debugpy",
-      "verified": true
-    },
-    {
-      "name": "sag",
-      "emoji": "🔊",
-      "verified": true
-    },
-    {
-      "name": "session-logs",
-      "emoji": "📜",
-      "verified": true
-    },
-    {
-      "name": "sherpa-onnx-tts",
-      "emoji": "🔉",
       "verified": true
     },
     {
@@ -311,33 +151,8 @@
       "verified": true
     },
     {
-      "name": "slack",
-      "emoji": "💬",
-      "verified": true
-    },
-    {
-      "name": "songsee",
-      "emoji": "🌊",
-      "verified": true
-    },
-    {
-      "name": "sonoscli",
-      "emoji": "🔊",
-      "verified": true
-    },
-    {
       "name": "spike",
       "emoji": "🧪",
-      "verified": true
-    },
-    {
-      "name": "spotify-player",
-      "emoji": "🎵",
-      "verified": true
-    },
-    {
-      "name": "summarize",
-      "emoji": "🧾",
       "verified": true
     },
     {
@@ -351,43 +166,13 @@
       "verified": true
     },
     {
-      "name": "things-mac",
-      "emoji": "✅",
-      "verified": true
-    },
-    {
       "name": "tmux",
       "emoji": "🧵",
       "verified": true
     },
     {
-      "name": "trello",
-      "emoji": "📋",
-      "verified": true
-    },
-    {
-      "name": "video-frames",
-      "emoji": "🎬",
-      "verified": true
-    },
-    {
-      "name": "voice-call",
-      "emoji": "📞",
-      "verified": true
-    },
-    {
-      "name": "wacli",
-      "emoji": "📱",
-      "verified": true
-    },
-    {
       "name": "weather",
       "emoji": "☔",
-      "verified": true
-    },
-    {
-      "name": "xurl",
-      "emoji": "🐦",
       "verified": true
     },
     {
