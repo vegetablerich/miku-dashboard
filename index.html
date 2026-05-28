@@ -73,9 +73,17 @@
     </div>
   </div>
 
+  <!-- 各Agent技能 -->
+  <div class="card">
+    <h2>🤖 Agent技能</h2>
+    <div id="agentSkillsContainer">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
   <!-- 已安装技能 -->
   <div class="card">
-    <h2>📦 技能列表</h2>
+    <h2>📦 全部技能</h2>
     <div id="skills">
       <div class="placeholder">加载中...</div>
     </div>
@@ -151,6 +159,25 @@ async function loadData() {
       </div>`;
     }).join('');
     document.getElementById('cronJobs').innerHTML = cronHtml || '<div class="placeholder">暂无定时任务</div>';
+
+    // Agent Skills (per-agent)
+    if (data.agentSkills) {
+      let agentSkillHtml = '';
+      const agentEmojis = {'Miku':'🎤','Seka':'📡','闪电':'⚡'};
+      for (const [agentName, skills] of Object.entries(data.agentSkills)) {
+        const emoji = agentEmojis[agentName] || '🤖';
+        const tags = skills.map(s => {
+          return `<span class="tag tag-blue">${s.emoji || '🔧'} ${s.name}</span>`;
+        }).join('');
+        agentSkillHtml += `<div class="agent-card" style="margin-bottom:10px">
+          <div class="agent-name">${emoji} ${agentName} <span style="color:var(--dim);font-weight:normal;font-size:0.75em">(${skills.length}个技能)</span></div>
+          <div style="margin-top:4px">${tags}</div>
+        </div>`;
+      }
+      document.getElementById('agentSkillsContainer').innerHTML = agentSkillHtml;
+    } else {
+      document.getElementById('agentSkillsContainer').innerHTML = '<div class="placeholder">暂未配置</div>';
+    }
 
     // Skills
     const skillTags = data.skills.map(s => {
