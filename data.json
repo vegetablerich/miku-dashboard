@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 17:18",
+  "updated_at": "2026-05-28 18:04",
   "agents": [
     {
       "name": "Miku",
@@ -30,9 +30,9 @@
     }
   ],
   "system": {
-    "cpu": "0%",
-    "memory": "846Mi/1.6Gi",
-    "uptime": "3 hours, 2 minutes",
+    "cpu": "5%",
+    "memory": "897Mi/1.6Gi",
+    "uptime": "3 hours, 48 minutes",
     "gateway": "running"
   },
   "cron": [
