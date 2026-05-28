@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 14:29",
+  "updated_at": "2026-05-28 14:39",
   "agents": [
     {
       "name": "Miku",
@@ -30,13 +30,366 @@
     }
   ],
   "system": {
-    "cpu": "0%",
-    "memory": "847Mi/1.6Gi",
-    "uptime": "13 minutes",
+    "cpu": "9.6%",
+    "memory": "937Mi/1.6Gi",
+    "uptime": "23 minutes",
     "gateway": "running"
   },
-  "cron": [],
+  "cron": [
+    {
+      "name": "meyo-heartbeat-afternoon",
+      "status": "active",
+      "schedule": "30 15 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "dashboard-update",
+      "status": "active",
+      "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "seka-morning-news",
+      "status": "active",
+      "schedule": "0 8 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "Daily geopolitics news",
+      "status": "active",
+      "schedule": "0 8 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "每日早间新闻简报",
+      "status": "active",
+      "schedule": "0 8 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "meyo-heartbeat-morning",
+      "status": "active",
+      "schedule": "30 9 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "meyo-diary",
+      "status": "active",
+      "schedule": "0 10 * * *",
+      "tz": "Asia/Shanghai"
+    }
+  ],
   "skills": [
+    {
+      "name": "1password",
+      "emoji": "🔐",
+      "verified": true
+    },
+    {
+      "name": "apple-notes",
+      "emoji": "📝",
+      "verified": true
+    },
+    {
+      "name": "apple-reminders",
+      "emoji": "⏰",
+      "verified": true
+    },
+    {
+      "name": "bear-notes",
+      "emoji": "🐻",
+      "verified": true
+    },
+    {
+      "name": "blogwatcher",
+      "emoji": "📰",
+      "verified": true
+    },
+    {
+      "name": "blucli",
+      "emoji": "🫐",
+      "verified": true
+    },
+    {
+      "name": "│ Use when controlling web pages with the OpenClaw",
+      "emoji": "browser-automation",
+      "verified": true
+    },
+    {
+      "name": "camsnap",
+      "emoji": "📸",
+      "verified": true
+    },
+    {
+      "name": "canvas",
+      "emoji": "🖼️",
+      "verified": true
+    },
+    {
+      "name": "│ Search, install, update, sync, or publish agent",
+      "emoji": "clawhub",
+      "verified": true
+    },
+    {
+      "name": "coding-agent",
+      "emoji": "🧩",
+      "verified": true
+    },
+    {
+      "name": "diagram-maker",
+      "emoji": "🧭",
+      "verified": true
+    },
+    {
+      "name": "discord",
+      "emoji": "🎮",
+      "verified": true
+    },
+    {
+      "name": "eightctl",
+      "emoji": "🛌",
+      "verified": true
+    },
+    {
+      "name": "│ Feishu document read/write operations. Activate when",
+      "emoji": "feishu-doc",
+      "verified": true
+    },
+    {
+      "name": "│ Feishu cloud storage file management. Activate when",
+      "emoji": "feishu-drive",
+      "verified": true
+    },
+    {
+      "name": "│ Feishu permission management for documents and files.",
+      "emoji": "feishu-perm",
+      "verified": true
+    },
+    {
+      "name": "│ Feishu knowledge base navigation. Activate when user",
+      "emoji": "feishu-wiki",
+      "verified": true
+    },
+    {
+      "name": "gemini",
+      "emoji": "✨",
+      "verified": true
+    },
+    {
+      "name": "│ Fetch GitHub issues, select candidates, spawn",
+      "emoji": "gh-issues",
+      "verified": true
+    },
+    {
+      "name": "gifgrep",
+      "emoji": "🧲",
+      "verified": true
+    },
+    {
+      "name": "github",
+      "emoji": "🐙",
+      "verified": true
+    },
+    {
+      "name": "gog",
+      "emoji": "🎮",
+      "verified": true
+    },
+    {
+      "name": "goplaces",
+      "emoji": "📍",
+      "verified": true
+    },
+    {
+      "name": "│ Audit/harden OpenClaw hosts: SSH, firewall, updates,",
+      "emoji": "healthcheck",
+      "verified": true
+    },
+    {
+      "name": "himalaya",
+      "emoji": "📧",
+      "verified": true
+    },
+    {
+      "name": "imsg",
+      "emoji": "📨",
+      "verified": true
+    },
+    {
+      "name": "mcporter",
+      "emoji": "📦",
+      "verified": true
+    },
+    {
+      "name": "meme-maker",
+      "emoji": "🖼️",
+      "verified": true
+    },
+    {
+      "name": "model-usage",
+      "emoji": "📊",
+      "verified": true
+    },
+    {
+      "name": "nano-pdf",
+      "emoji": "📄",
+      "verified": true
+    },
+    {
+      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node",
+      "emoji": "node-connect",
+      "verified": true
+    },
+    {
+      "name": "node-inspect-debugger",
+      "emoji": "🪲",
+      "verified": true
+    },
+    {
+      "name": "notion",
+      "emoji": "📝",
+      "verified": true
+    },
+    {
+      "name": "obsidian",
+      "emoji": "💎",
+      "verified": true
+    },
+    {
+      "name": "openai-whisper",
+      "emoji": "🎤",
+      "verified": true
+    },
+    {
+      "name": "openai-whisper-api",
+      "emoji": "🌐",
+      "verified": true
+    },
+    {
+      "name": "openhue",
+      "emoji": "💡",
+      "verified": true
+    },
+    {
+      "name": "oracle",
+      "emoji": "🧿",
+      "verified": true
+    },
+    {
+      "name": "ordercli",
+      "emoji": "🛵",
+      "verified": true
+    },
+    {
+      "name": "peekaboo",
+      "emoji": "👀",
+      "verified": true
+    },
+    {
+      "name": "│ Debug Python with pdb, breakpoint(), post-mortem",
+      "emoji": "python-debugpy",
+      "verified": true
+    },
+    {
+      "name": "sag",
+      "emoji": "🔊",
+      "verified": true
+    },
+    {
+      "name": "session-logs",
+      "emoji": "📜",
+      "verified": true
+    },
+    {
+      "name": "sherpa-onnx-tts",
+      "emoji": "🔉",
+      "verified": true
+    },
+    {
+      "name": "│ Create, edit, audit, tidy, validate, or restructure",
+      "emoji": "skill-creator",
+      "verified": true
+    },
+    {
+      "name": "slack",
+      "emoji": "💬",
+      "verified": true
+    },
+    {
+      "name": "songsee",
+      "emoji": "🌊",
+      "verified": true
+    },
+    {
+      "name": "sonoscli",
+      "emoji": "🔊",
+      "verified": true
+    },
+    {
+      "name": "spike",
+      "emoji": "🧪",
+      "verified": true
+    },
+    {
+      "name": "spotify-player",
+      "emoji": "🎵",
+      "verified": true
+    },
+    {
+      "name": "summarize",
+      "emoji": "🧾",
+      "verified": true
+    },
+    {
+      "name": "taskflow",
+      "emoji": "🪝",
+      "verified": true
+    },
+    {
+      "name": "taskflow-inbox-triage",
+      "emoji": "📥",
+      "verified": true
+    },
+    {
+      "name": "things-mac",
+      "emoji": "✅",
+      "verified": true
+    },
+    {
+      "name": "tmux",
+      "emoji": "🧵",
+      "verified": true
+    },
+    {
+      "name": "trello",
+      "emoji": "📋",
+      "verified": true
+    },
+    {
+      "name": "video-frames",
+      "emoji": "🎬",
+      "verified": true
+    },
+    {
+      "name": "voice-call",
+      "emoji": "📞",
+      "verified": true
+    },
+    {
+      "name": "wacli",
+      "emoji": "📱",
+      "verified": true
+    },
+    {
+      "name": "weather",
+      "emoji": "☔",
+      "verified": true
+    },
+    {
+      "name": "xurl",
+      "emoji": "🐦",
+      "verified": true
+    },
     {
       "name": "Strava",
       "emoji": "🚴",
@@ -53,12 +406,17 @@
       "name": "微信",
       "icon": "💬",
       "status": "connected"
+    },
+    {
+      "name": "飞书",
+      "icon": "📘",
+      "status": "connected"
     }
   ],
   "recentActivity": [
     {
       "time": "2026-05-28",
-      "text": "Dashboard 启动"
+      "text": "Dashboard 数据已更新"
     }
   ]
 }
