@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎤 Miku Dashboard</title>
+<style>
+  :root { --bg: #0d0d1a; --card: #13131f; --green: #2dd4bf; --red: #f87171; --amber: #fbbf24; --blue: #60a5fa; --text: #e2e8f0; --dim: #6b7280; --border: #1e1e33; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, 'Segoe UI', sans-serif; padding: 16px; }
+  h1 { font-size: 1.4em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  h2 { font-size: 1em; margin-bottom: 10px; color: var(--blue); }
+  .last-update { font-size: 0.75em; color: var(--dim); margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card { background: var(--card); border-radius: 10px; padding: 14px; border: 1px solid var(--border); }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .dot-green { background: var(--green); }
+  .dot-red { background: var(--red); }
+  .dot-amber { background: var(--amber); }
+  .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(30,30,51,0.6); font-size: 0.85em; }
+  .row:last-child { border: none; }
+  .label { color: var(--dim); }
+  .value { font-weight: 500; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; margin: 2px; }
+  .tag-green { background: rgba(45,212,191,0.15); color: var(--green); }
+  .tag-red { background: rgba(248,113,113,0.15); color: var(--red); }
+  .tag-amber { background: rgba(251,191,36,0.15); color: var(--amber); }
+  .tag-blue { background: rgba(96,165,250,0.15); color: var(--blue); }
+  .agent-card { margin-bottom: 8px; }
+  .agent-card:last-child { margin-bottom: 0; }
+  .agent-name { font-weight: 600; font-size: 0.9em; margin-bottom: 4px; }
+  .placeholder { color: var(--dim); font-size: 0.8em; font-style: italic; }
+  a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>🎤 Miku Dashboard</h1>
+<div class="last-update" id="updateTime">加载中...</div>
+
+<div class="grid">
+
+  <!-- Agent 状态 -->
+  <div class="card">
+    <h2>🤖 Agent 状态</h2>
+    <div id="agentStatus">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+  <!-- 系统健康 -->
+  <div class="card">
+    <h2>🖥️ 系统健康</h2>
+    <div id="systemHealth">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+  <!-- Cron 任务 -->
+  <div class="card">
+    <h2>⏰ 定时任务</h2>
+    <div id="cronJobs">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+  <!-- 已安装技能 -->
+  <div class="card">
+    <h2>📦 技能列表</h2>
+    <div id="skills">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+  <!-- 渠道连接 -->
+  <div class="card">
+    <h2>📡 渠道状态</h2>
+    <div id="channels">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+  <!-- 近期活动 -->
+  <div class="card">
+    <h2>📋 近期活动</h2>
+    <div id="recentActivity">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+async function loadData() {
+  try {
+    const resp = await fetch('./data.json?' + Date.now());
+    const data = await resp.json();
+
+    document.getElementById('updateTime').textContent = '更新于: ' + data.updated_at;
+
+    // Agent Status
+    const agentHtml = data.agents.map(a => {
+      const dot = a.status === 'running' ? 'dot-green' : a.status === 'idle' ? 'dot-amber' : 'dot-red';
+      return `<div class="agent-card">
+        <div class="agent-name">${a.emoji} ${a.name} <span class="status-dot ${dot}"></span>${a.status}</div>
+        <div class="row"><span class="label">模型</span><span class="value">${a.model}</span></div>
+        <div class="row"><span class="label">最后活跃</span><span class="value">${a.lastActive}</span></div>
+        <div class="row"><span class="label">会话数</span><span class="value">${a.sessions}</span></div>
+      </div>`;
+    }).join('');
+    document.getElementById('agentStatus').innerHTML = agentHtml;
+
+    // System Health
+    document.getElementById('systemHealth').innerHTML = `
+      <div class="row"><span class="label">CPU</span><span class="value">${data.system.cpu}</span></div>
+      <div class="row"><span class="label">内存</span><span class="value">${data.system.memory}</span></div>
+      <div class="row"><span class="label">运行时间</span><span class="value">${data.system.uptime}</span></div>
+      <div class="row"><span class="label">网关状态</span><span class="value"><span class="status-dot dot-green"></span>${data.system.gateway}</span></div>
+    `;
+
+    // Cron Jobs
+    const cronHtml = data.cron.map(c => {
+      const dot = c.status === 'active' ? 'dot-green' : c.status === 'error' ? 'dot-red' : 'dot-amber';
+      return `<div class="row">
+        <span class="label">${c.name}</span>
+        <span class="value"><span class="status-dot ${dot}"></span>${c.schedule}</span>
+      </div>`;
+    }).join('');
+    document.getElementById('cronJobs').innerHTML = cronHtml || '<div class="placeholder">暂无定时任务</div>';
+
+    // Skills
+    const skillTags = data.skills.map(s => {
+      const color = s.verified ? 'tag-green' : 'tag-blue';
+      return `<span class="tag ${color}">${s.emoji} ${s.name}</span>`;
+    }).join('');
+    document.getElementById('skills').innerHTML = skillTags || '<div class="placeholder">暂无技能</div>';
+
+    // Channels
+    const chHtml = data.channels.map(c => {
+      const dot = c.status === 'connected' ? 'dot-green' : 'dot-red';
+      return `<div class="row">
+        <span class="label">${c.icon} ${c.name}</span>
+        <span class="value"><span class="status-dot ${dot}"></span>${c.status}</span>
+      </div>`;
+    }).join('');
+    document.getElementById('channels').innerHTML = chHtml;
+
+    // Recent Activity
+    const activityHtml = data.recentActivity.map(a => {
+      return `<div class="row">
+        <span class="label">${a.time}</span>
+        <span class="value">${a.text}</span>
+      </div>`;
+    }).join('');
+    document.getElementById('recentActivity').innerHTML = activityHtml || '<div class="placeholder">暂无近期活动</div>';
+
+  } catch(e) {
+    document.getElementById('updateTime').textContent = '⚠️ 数据加载失败: ' + e.message;
+  }
+}
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>
