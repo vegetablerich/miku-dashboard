@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 14:39",
+  "updated_at": "2026-05-28 14:46",
   "agents": [
     {
       "name": "Miku",
@@ -30,9 +30,9 @@
     }
   ],
   "system": {
-    "cpu": "9.6%",
-    "memory": "937Mi/1.6Gi",
-    "uptime": "23 minutes",
+    "cpu": "9%",
+    "memory": "952Mi/1.6Gi",
+    "uptime": "30 minutes",
     "gateway": "running"
   },
   "cron": [
@@ -46,12 +46,6 @@
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
-      "name": "seka-morning-news",
-      "status": "active",
-      "schedule": "0 8 * * *",
       "tz": "Asia/Shanghai"
     },
     {
