@@ -57,6 +57,14 @@
     </div>
   </div>
 
+  <!-- 健康巡检 -->
+  <div class="card">
+    <h2>🔍 任务健康</h2>
+    <div id="healthCheck">
+      <div class="placeholder">加载中...</div>
+    </div>
+  </div>
+
   <!-- Cron 任务 -->
   <div class="card">
     <h2>⏰ 定时任务</h2>
@@ -118,6 +126,21 @@ async function loadData() {
       <div class="row"><span class="label">运行时间</span><span class="value">${data.system.uptime}</span></div>
       <div class="row"><span class="label">网关状态</span><span class="value"><span class="status-dot dot-green"></span>${data.system.gateway}</span></div>
     `;
+
+    // Health Check
+    if (data.healthCheck) {
+      const hc = data.healthCheck;
+      const hcDot = hc.critical > 0 ? 'dot-red' : hc.errors > 0 || hc.warnings > 0 ? 'dot-amber' : 'dot-green';
+      document.getElementById('healthCheck').innerHTML = `
+        <div class="row"><span class="label">巡检时间</span><span class="value">${hc.checked_at}</span></div>
+        <div class="row"><span class="label">状态</span><span class="value"><span class="status-dot ${hcDot}"></span>${hc.critical > 0 ? hc.critical+'个严重' : hc.warnings > 0 ? hc.warnings+'个警告' : hc.errors > 0 ? hc.errors+'个异常' : '一切正常'}</span></div>
+        <div class="row"><span class="label">正常</span><span class="value" style="color:var(--green)">${hc.healthy}</span></div>
+        ${hc.warnings > 0 ? `<div class="row"><span class="label">警告</span><span class="value" style="color:var(--amber)">${hc.warnings}</span></div>` : ''}
+        ${hc.critical > 0 ? `<div class="row"><span class="label">严重</span><span class="value" style="color:var(--red)">${hc.critical}</span></div>` : ''}
+      `;
+    } else {
+      document.getElementById('healthCheck').innerHTML = '<div class="placeholder">暂无巡检数据</div>';
+    }
 
     // Cron Jobs
     const cronHtml = data.cron.map(c => {
