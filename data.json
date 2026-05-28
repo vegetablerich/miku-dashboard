@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 18:32",
+  "updated_at": "2026-05-28 18:38",
   "agents": [
     {
       "name": "Miku",
@@ -31,21 +31,21 @@
   ],
   "system": {
     "cpu": "0%",
-    "memory": "922Mi/1.6Gi",
-    "uptime": "8 minutes",
+    "memory": "913Mi/1.6Gi",
+    "uptime": "14 minutes",
     "gateway": "running"
   },
   "cron": [
     {
-      "name": "task-health-check",
-      "status": "active",
-      "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "task-health-check",
+      "status": "active",
+      "schedule": "30 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
@@ -96,7 +96,7 @@
       "verified": true
     },
     {
-      "name": "│ Feishu document read/write operations. Activate when user",
+      "name": "│ Feishu document read/write operations. Activate when",
       "emoji": "feishu-doc",
       "verified": true
     },
@@ -126,7 +126,7 @@
       "verified": true
     },
     {
-      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node pairing, QR/",
+      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node pairing,",
       "emoji": "node-connect",
       "verified": true
     },
@@ -143,6 +143,11 @@
     {
       "name": "│ Debug Python with pdb, breakpoint(), post-mortem",
       "emoji": "python-debugpy",
+      "verified": true
+    },
+    {
+      "name": "│ Captures learnings, errors, and corrections to enable",
+      "emoji": "self-improvement",
       "verified": true
     },
     {
