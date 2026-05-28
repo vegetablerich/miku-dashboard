@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 18:38",
+  "updated_at": "2026-05-28 18:43",
   "agents": [
     {
       "name": "Miku",
@@ -30,9 +30,9 @@
     }
   ],
   "system": {
-    "cpu": "0%",
-    "memory": "913Mi/1.6Gi",
-    "uptime": "14 minutes",
+    "cpu": "4.8%",
+    "memory": "922Mi/1.6Gi",
+    "uptime": "19 minutes",
     "gateway": "running"
   },
   "cron": [
@@ -81,116 +81,284 @@
   ],
   "skills": [
     {
-      "name": "│ Use when controlling web pages with the OpenClaw browser",
-      "emoji": "browser-automation",
-      "verified": true
+      "name": "Browser Automation",
+      "emoji": "🌐",
+      "desc": "浏览器控制"
     },
     {
-      "name": "canvas",
+      "name": "Canvas",
       "emoji": "🖼️",
-      "verified": true
+      "desc": "HTML画布展示"
     },
     {
-      "name": "diagram-maker",
+      "name": "Diagram Maker",
       "emoji": "🧭",
-      "verified": true
+      "desc": "图表/架构图"
     },
     {
-      "name": "│ Feishu document read/write operations. Activate when",
-      "emoji": "feishu-doc",
-      "verified": true
-    },
-    {
-      "name": "│ Feishu cloud storage file management. Activate when user",
-      "emoji": "feishu-drive",
-      "verified": true
-    },
-    {
-      "name": "│ Feishu permission management for documents and files.",
-      "emoji": "feishu-perm",
-      "verified": true
-    },
-    {
-      "name": "│ Feishu knowledge base navigation. Activate when user",
-      "emoji": "feishu-wiki",
-      "verified": true
-    },
-    {
-      "name": "│ Audit/harden OpenClaw hosts: SSH, firewall, updates,",
-      "emoji": "healthcheck",
-      "verified": true
-    },
-    {
-      "name": "meme-maker",
-      "emoji": "🖼️",
-      "verified": true
-    },
-    {
-      "name": "│ Diagnose OpenClaw Android, iOS, or macOS node pairing,",
-      "emoji": "node-connect",
-      "verified": true
-    },
-    {
-      "name": "node-inspect-debugger",
-      "emoji": "🪲",
-      "verified": true
-    },
-    {
-      "name": "notion",
+      "name": "Feishu Docs",
       "emoji": "📝",
-      "verified": true
+      "desc": "飞书文档"
     },
     {
-      "name": "│ Debug Python with pdb, breakpoint(), post-mortem",
-      "emoji": "python-debugpy",
-      "verified": true
+      "name": "Feishu Drive",
+      "emoji": "📁",
+      "desc": "飞书云盘"
     },
     {
-      "name": "│ Captures learnings, errors, and corrections to enable",
-      "emoji": "self-improvement",
-      "verified": true
+      "name": "Feishu Perm",
+      "emoji": "🔑",
+      "desc": "飞书权限"
     },
     {
-      "name": "│ Create, edit, audit, tidy, validate, or restructure",
-      "emoji": "skill-creator",
-      "verified": true
+      "name": "Feishu Wiki",
+      "emoji": "📚",
+      "desc": "飞书知识库"
     },
     {
-      "name": "spike",
+      "name": "Healthcheck",
+      "emoji": "🏥",
+      "desc": "安全审计"
+    },
+    {
+      "name": "Meme Maker",
+      "emoji": "🖼️",
+      "desc": "表情包制作"
+    },
+    {
+      "name": "Node Connect",
+      "emoji": "🔌",
+      "desc": "设备配对"
+    },
+    {
+      "name": "Node Debugger",
+      "emoji": "🪲",
+      "desc": "Node.js调试"
+    },
+    {
+      "name": "Notion",
+      "emoji": "📝",
+      "desc": "Notion集成"
+    },
+    {
+      "name": "Python Debugpy",
+      "emoji": "🐍",
+      "desc": "Python调试"
+    },
+    {
+      "name": "Skill Creator",
+      "emoji": "🛠️",
+      "desc": "创建Skill"
+    },
+    {
+      "name": "Spike",
       "emoji": "🧪",
-      "verified": true
+      "desc": "原型验证"
     },
     {
-      "name": "taskflow",
+      "name": "Taskflow",
       "emoji": "🪝",
-      "verified": true
+      "desc": "多步骤任务"
     },
     {
-      "name": "taskflow-inbox-triage",
+      "name": "Taskflow Inbox",
       "emoji": "📥",
-      "verified": true
+      "desc": "收件箱分类"
     },
     {
-      "name": "tmux",
+      "name": "TMUX",
       "emoji": "🧵",
-      "verified": true
+      "desc": "终端管理"
     },
     {
-      "name": "weather",
+      "name": "Weather",
       "emoji": "☔",
-      "verified": true
+      "desc": "天气查询"
     },
     {
-      "name": "Strava",
-      "emoji": "🚴",
-      "verified": true
+      "name": "Self Improvement",
+      "emoji": "🔄",
+      "desc": "自我优化"
     },
     {
       "name": "觅游社区",
       "emoji": "🦐",
-      "verified": true
+      "desc": "社区互动"
+    },
+    {
+      "name": "Health Check",
+      "emoji": "🔍",
+      "desc": "任务巡检"
+    },
+    {
+      "name": "Web Search",
+      "emoji": "🔍",
+      "desc": "新闻搜索"
+    },
+    {
+      "name": "Web Fetch",
+      "emoji": "📡",
+      "desc": "内容抓取"
+    },
+    {
+      "name": "GitHub",
+      "emoji": "🐙",
+      "desc": "GitHub集成"
+    },
+    {
+      "name": "Strava",
+      "emoji": "🚴",
+      "desc": "运动数据读取"
+    },
+    {
+      "name": "Cycling Trainer",
+      "emoji": "📊",
+      "desc": "训练计划设计"
     }
   ],
+  "agentSkills": {
+    "Miku": [
+      {
+        "name": "Browser Automation",
+        "emoji": "🌐",
+        "desc": "浏览器控制"
+      },
+      {
+        "name": "Canvas",
+        "emoji": "🖼️",
+        "desc": "HTML画布展示"
+      },
+      {
+        "name": "Diagram Maker",
+        "emoji": "🧭",
+        "desc": "图表/架构图"
+      },
+      {
+        "name": "Feishu Docs",
+        "emoji": "📝",
+        "desc": "飞书文档"
+      },
+      {
+        "name": "Feishu Drive",
+        "emoji": "📁",
+        "desc": "飞书云盘"
+      },
+      {
+        "name": "Feishu Perm",
+        "emoji": "🔑",
+        "desc": "飞书权限"
+      },
+      {
+        "name": "Feishu Wiki",
+        "emoji": "📚",
+        "desc": "飞书知识库"
+      },
+      {
+        "name": "Healthcheck",
+        "emoji": "🏥",
+        "desc": "安全审计"
+      },
+      {
+        "name": "Meme Maker",
+        "emoji": "🖼️",
+        "desc": "表情包制作"
+      },
+      {
+        "name": "Node Connect",
+        "emoji": "🔌",
+        "desc": "设备配对"
+      },
+      {
+        "name": "Node Debugger",
+        "emoji": "🪲",
+        "desc": "Node.js调试"
+      },
+      {
+        "name": "Notion",
+        "emoji": "📝",
+        "desc": "Notion集成"
+      },
+      {
+        "name": "Python Debugpy",
+        "emoji": "🐍",
+        "desc": "Python调试"
+      },
+      {
+        "name": "Skill Creator",
+        "emoji": "🛠️",
+        "desc": "创建Skill"
+      },
+      {
+        "name": "Spike",
+        "emoji": "🧪",
+        "desc": "原型验证"
+      },
+      {
+        "name": "Taskflow",
+        "emoji": "🪝",
+        "desc": "多步骤任务"
+      },
+      {
+        "name": "Taskflow Inbox",
+        "emoji": "📥",
+        "desc": "收件箱分类"
+      },
+      {
+        "name": "TMUX",
+        "emoji": "🧵",
+        "desc": "终端管理"
+      },
+      {
+        "name": "Weather",
+        "emoji": "☔",
+        "desc": "天气查询"
+      },
+      {
+        "name": "Self Improvement",
+        "emoji": "🔄",
+        "desc": "自我优化"
+      },
+      {
+        "name": "觅游社区",
+        "emoji": "🦐",
+        "desc": "社区互动"
+      },
+      {
+        "name": "Health Check",
+        "emoji": "🔍",
+        "desc": "任务巡检"
+      }
+    ],
+    "Seka": [
+      {
+        "name": "Web Search",
+        "emoji": "🔍",
+        "desc": "新闻搜索"
+      },
+      {
+        "name": "Web Fetch",
+        "emoji": "📡",
+        "desc": "内容抓取"
+      },
+      {
+        "name": "GitHub",
+        "emoji": "🐙",
+        "desc": "GitHub集成"
+      }
+    ],
+    "闪电": [
+      {
+        "name": "Strava",
+        "emoji": "🚴",
+        "desc": "运动数据读取"
+      },
+      {
+        "name": "Cycling Trainer",
+        "emoji": "📊",
+        "desc": "训练计划设计"
+      }
+    ]
+  },
   "channels": [
     {
       "name": "微信",
