@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30 06:04",
+  "updated_at": "2026-05-30 06:30",
   "agents": [
     {
       "name": "Miku",
@@ -41,16 +41,10 @@
   "system": {
     "cpu": "9%",
     "memory": "1.2Gi/1.6Gi",
-    "uptime": "1 day, 10 hours, 24 minutes",
+    "uptime": "1 day, 10 hours, 49 minutes",
     "gateway": "running"
   },
   "cron": [
-    {
-      "name": "dashboard-update",
-      "status": "active",
-      "schedule": "0 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
     {
       "name": "task-health-check",
       "status": "active",
@@ -79,6 +73,12 @@
       "name": "meyo-diary",
       "status": "active",
       "schedule": "0 10 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "dashboard-update",
+      "status": "active",
+      "schedule": "0 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
