@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31 00:30",
+  "updated_at": "2026-05-31 06:04",
   "agents": [
     {
       "name": "Miku",
@@ -39,22 +39,22 @@
     }
   ],
   "system": {
-    "cpu": "0%",
+    "cpu": "4.3%",
     "memory": "1.3Gi/1.6Gi",
-    "uptime": "2 days, 4 hours, 49 minutes",
+    "uptime": "2 days, 10 hours, 24 minutes",
     "gateway": "running"
   },
   "cron": [
     {
-      "name": "task-health-check",
-      "status": "active",
-      "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "task-health-check",
+      "status": "active",
+      "schedule": "30 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
