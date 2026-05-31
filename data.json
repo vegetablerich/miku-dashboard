@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31 18:30",
+  "updated_at": "2026-06-01 00:04",
   "agents": [
     {
       "name": "Miku",
@@ -36,25 +36,34 @@
       "model": "deepseek/deepseek-v4-flash",
       "lastActive": "刚刚",
       "sessions": 0
+    },
+    {
+      "name": "逻辑",
+      "id": "logic",
+      "emoji": "🧠",
+      "status": "running",
+      "model": "deepseek/deepseek-v4-flash",
+      "lastActive": "刚刚",
+      "sessions": 0
     }
   ],
   "system": {
-    "cpu": "0%",
-    "memory": "1.3Gi/1.6Gi",
-    "uptime": "2 days, 22 hours, 49 minutes",
+    "cpu": "4.5%",
+    "memory": "853Mi/1.6Gi",
+    "uptime": "3 days, 4 hours, 23 minutes",
     "gateway": "running"
   },
   "cron": [
     {
-      "name": "task-health-check",
-      "status": "active",
-      "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "task-health-check",
+      "status": "active",
+      "schedule": "30 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
@@ -398,7 +407,7 @@
   ],
   "recentActivity": [
     {
-      "time": "2026-05-31",
+      "time": "2026-06-01",
       "text": "Dashboard 数据已更新"
     }
   ]
