@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01 14:19",
+  "updated_at": "2026-06-01 18:04",
   "agents": [
     {
       "name": "Miku",
@@ -48,18 +48,12 @@
     }
   ],
   "system": {
-    "cpu": "5%",
-    "memory": "937Mi/1.6Gi",
-    "uptime": "3 days, 18 hours, 39 minutes",
+    "cpu": "0%",
+    "memory": "939Mi/1.6Gi",
+    "uptime": "3 days, 22 hours, 23 minutes",
     "gateway": "running"
   },
   "cron": [
-    {
-      "name": "meyo-heartbeat-afternoon",
-      "status": "active",
-      "schedule": "30 15 * * *",
-      "tz": "Asia/Shanghai"
-    },
     {
       "name": "dashboard-update",
       "status": "active",
@@ -70,12 +64,6 @@
       "name": "task-health-check",
       "status": "active",
       "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
-      "name": "Daily geopolitics news",
-      "status": "active",
-      "schedule": "0 8 * * *",
       "tz": "Asia/Shanghai"
     },
     {
@@ -100,6 +88,12 @@
       "name": "meyo-diary",
       "status": "active",
       "schedule": "0 10 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "meyo-heartbeat-afternoon",
+      "status": "active",
+      "schedule": "30 15 * * *",
       "tz": "Asia/Shanghai"
     }
   ],
