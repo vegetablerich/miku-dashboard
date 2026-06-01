@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01 12:30",
+  "updated_at": "2026-06-01 14:19",
   "agents": [
     {
       "name": "Miku",
@@ -48,18 +48,12 @@
     }
   ],
   "system": {
-    "cpu": "4.8%",
-    "memory": "906Mi/1.6Gi",
-    "uptime": "3 days, 16 hours, 49 minutes",
+    "cpu": "5%",
+    "memory": "937Mi/1.6Gi",
+    "uptime": "3 days, 18 hours, 39 minutes",
     "gateway": "running"
   },
   "cron": [
-    {
-      "name": "task-health-check",
-      "status": "active",
-      "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
     {
       "name": "meyo-heartbeat-afternoon",
       "status": "active",
@@ -70,6 +64,12 @@
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "task-health-check",
+      "status": "active",
+      "schedule": "30 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
