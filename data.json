@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01 18:30",
+  "updated_at": "2026-06-02 00:04",
   "agents": [
     {
       "name": "Miku",
@@ -48,22 +48,22 @@
     }
   ],
   "system": {
-    "cpu": "9.6%",
+    "cpu": "9%",
     "memory": "1.0Gi/1.6Gi",
-    "uptime": "3 days, 22 hours, 49 minutes",
+    "uptime": "4 days, 4 hours, 23 minutes",
     "gateway": "running"
   },
   "cron": [
     {
-      "name": "task-health-check",
-      "status": "active",
-      "schedule": "30 */6 * * *",
-      "tz": "Asia/Shanghai"
-    },
-    {
       "name": "dashboard-update",
       "status": "active",
       "schedule": "0 */6 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    {
+      "name": "task-health-check",
+      "status": "active",
+      "schedule": "30 */6 * * *",
       "tz": "Asia/Shanghai"
     },
     {
@@ -401,7 +401,7 @@
   ],
   "recentActivity": [
     {
-      "time": "2026-06-01",
+      "time": "2026-06-02",
       "text": "Dashboard 数据已更新"
     }
   ]
