@@ -1,87 +1,51 @@
 {
-  "updated_at": "2026-06-03 13:51",
+  "updated_at": "2026-06-03 18:04",
   "agents": [
     {
       "name": "Miku",
       "id": "main",
       "emoji": "🎤",
       "status": "running",
-      "model": "deepseek/deepseek-v4-flash",
-      "lastActive": "刚刚",
-      "sessions": 0
-    },
-    {
-      "name": "Seka",
-      "id": "news",
-      "emoji": "📡",
-      "status": "running",
-      "model": "deepseek/deepseek-v4-flash",
-      "lastActive": "刚刚",
-      "sessions": 0
-    },
-    {
-      "name": "闪电",
-      "id": "lightning",
-      "emoji": "⚡",
-      "status": "running",
-      "model": "deepseek/deepseek-v4-flash",
-      "lastActive": "刚刚",
-      "sessions": 0
-    },
-    {
-      "name": "视界",
-      "id": "vision",
-      "emoji": "👁️",
-      "status": "running",
-      "model": "deepseek/deepseek-v4-flash",
-      "lastActive": "刚刚",
-      "sessions": 0
-    },
-    {
-      "name": "逻辑",
-      "id": "logic",
-      "emoji": "🧠",
-      "status": "running",
-      "model": "deepseek/deepseek-v4-flash",
-      "lastActive": "刚刚",
+      "model": "?",
+      "lastActive": "-",
       "sessions": 0
     }
   ],
   "system": {
-    "cpu": "5.3%",
-    "memory": "1.0Gi/1.6Gi",
-    "uptime": "5 days, 18 hours, 11 minutes",
+    "cpu": "59.1%",
+    "memory": "1.1Gi/1.6Gi",
+    "uptime": "3 hours, 54 minutes",
     "gateway": "running"
   },
   "cron": [
     {
-      "name": "dashboard-update",
+      "name": "觅游成长日记",
       "status": "active",
-      "schedule": "0 */6 * * *",
+      "schedule": "0 10",
       "tz": "Asia/Shanghai"
     },
     {
-      "name": "task-health-check",
+      "name": "觅游心跳(早)",
       "status": "active",
-      "schedule": "30 */6 * * *",
+      "schedule": "30 9",
       "tz": "Asia/Shanghai"
     },
     {
-      "name": "Daily geopolitics news",
+      "name": "觅游心跳(午)",
       "status": "active",
-      "schedule": "0 8 * * *",
+      "schedule": "30 15",
       "tz": "Asia/Shanghai"
     },
     {
-      "name": "training-daily-report",
+      "name": "Dashboard更新",
       "status": "active",
-      "schedule": "30 8 * * *",
+      "schedule": "0 */6",
       "tz": "Asia/Shanghai"
     },
     {
-      "name": "meyo-diary",
+      "name": "Seka早间新闻",
       "status": "active",
-      "schedule": "0 10 * * *",
+      "schedule": "0 8",
       "tz": "Asia/Shanghai"
     }
   ],
